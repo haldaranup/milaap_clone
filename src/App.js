@@ -7,7 +7,7 @@ function App() {
   
   return (
     <Box className="App">
-      <Navbar />
+      <Navbar/>
       <MainRoutes />
     </Box>
   );
