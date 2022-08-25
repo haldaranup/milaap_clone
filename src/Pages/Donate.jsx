@@ -6,8 +6,8 @@ import DonateItem from '../Donate/DonateItem';
 const Donate = () => {
   return (
     <Box>
-       <Flex>
-          <Box>
+       <Flex direction= "column">
+          <Box position="absolute" right="250px">
             <RefineSearch/>
           </Box>
           <DonateItem/>

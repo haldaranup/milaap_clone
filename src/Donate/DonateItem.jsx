@@ -23,9 +23,10 @@ useEffect(()=>{
         <Grid templateColumns={["repeat(1,1fr)","repeat(1,1fr)","repeat(2,1fr)","repeat(2,1fr)","repeat(3,1fr)"]} gap="30px">
           {
             donate.length>0 && donate.map((data)=>{
+              //console.log(data)
               return (<Box key={data.id}>
               <Link to={`/donate/${data.id}`}>
-                  <DonateCard {...donate}/>
+                  <DonateCard data={data}/>
               </Link>
             </Box>)
             })
