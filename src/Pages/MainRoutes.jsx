@@ -5,14 +5,17 @@ import Homepage from "./Homepage";
 import LendPage from "./LendPage";
 
 import Donate from "./Donate";
+import SingleDonate from "../Donate/SingleDonate";
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />
 
+      <Route path="/donate" element={<Donate/>} />
+      <Route path="/donate/:id" element={<SingleDonate/>} />
       <Route path="/fund" element={<LendPage />} />
 
-      <Route path="/donate" element={<Donate />} />
+
     </Routes>
   );
 };
