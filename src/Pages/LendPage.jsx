@@ -4,15 +4,15 @@ import { useSearchParams } from "react-router-dom";
 import ContentCard from "../Components/Lend/ContentCard";
 import LendCard from "../Components/Lend/LendCard";
 import LendTop from "../Components/Lend/LendTop";
-import { getLendData } from "../Redux/App/action";
+import { getLendData } from "../Redux/AppReducer/action";
 import "../Styles/lendPage.scss";
 import { Spinner } from "@chakra-ui/react";
 
 const LendPage = () => {
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
-  const lendData = useSelector((state) => state.app.lendData);
-  const isLoading = useSelector((state) => state.app.isLoading);
+  const lendData = useSelector((state) => state.AppReducer.lendData);
+  const isLoading = useSelector((state) => state.AppReducer.isLoading);
   const initialState = searchParams.getAll("category");
   // console.log(lendData);
   // console.log(initialState)
