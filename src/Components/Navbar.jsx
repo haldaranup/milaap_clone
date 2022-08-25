@@ -114,7 +114,7 @@ export default function Navbar() {
 
               <NavLink style={({ isActive }) =>
               isActive ? activeStyle : active4
-            } to="/lend">Lend</NavLink>
+            } to="/fund">Lend</NavLink>
 
               <NavLink style={({ isActive }) =>
               isActive ? activeStyle : active4
