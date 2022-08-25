@@ -26,7 +26,7 @@ const DonateCard = ({data}) => {
           </Text>
         </Box>
            <Flex m="20px 10px 10px 10px">
-             <CircularProgress value={data.progress_circle}  color="green.600"
+             <CircularProgress value={data.progress_circle}  color="green"
             size="50px">
               <CircularProgressLabel>
               {data.progress_circle}%
