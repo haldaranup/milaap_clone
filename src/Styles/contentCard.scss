@@ -3,7 +3,6 @@
 .contentCard {
   margin-bottom: 120px;
   gap: 30px;
-  
 
   @include flex();
   .leftContent {
@@ -24,18 +23,30 @@
         color: $themeColor;
       }
     }
-    .lendBtn {
+    .lendBtnDisabled {
       margin-top: 1rem;
     }
   }
   .rightContent {
     // border: 1px solid red;
     @include flex($fd: column);
-    height: 54vh;
+    height: 400px;
     line-height: 25px;
 
     .aboutLend {
       color: #828282;
+      max-height: 400px;
+      .description {
+        margin-bottom: 10px;
+        p {
+          display: inline;
+          color: $themeColor;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
       div {
         font-size: 0.9rem;
         font-weight: 500;
@@ -66,9 +77,15 @@
         color: gray;
       }
     }
+
     .lendMoney {
       width: 260px;
       @include flex($ai: center);
+      div {
+        .alertLend {
+          border: 1px solid red;
+        }
+      }
       button {
         width: 30px;
         background-color: rgb(226, 228, 228);
@@ -87,11 +104,24 @@
       .lendBtn {
         button {
           width: 100px;
+          height: 40px;
           background-color: $themeColor;
           color: white;
+          border-radius: 24px;
           &:hover {
             background-color: $darkThemeColor;
           }
+        }
+      }
+
+      .lendBtnDisabled {
+        button {
+          width: 100px;
+          background-color: $disabledColor;
+          color: white;
+
+          height: 44px;
+          border-radius: 24px;
         }
       }
     }
@@ -104,7 +134,7 @@
       cursor: pointer;
       background-color: #fff;
       border: 1px solid $themeColor;
-      border-radius: 20px;
+      border-radius: 24px;
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
           rgba(0, 0, 0, 0.23) 0px 3px 6px;

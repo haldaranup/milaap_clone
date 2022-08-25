@@ -12,7 +12,7 @@
     }
   }
   .lendHeading {
-    width: 75%;
+    width: 1120px;
     margin: auto;
     h1 {
       font-size: 1.7rem;
@@ -30,7 +30,7 @@
     // border: 1px solid red;
     @include flex();
     gap: 20px;
-    width: 75vw;
+    width: 1120px;
     margin: auto;
     // border: 1px solid red;
     .contentItems {

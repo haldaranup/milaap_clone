@@ -27,7 +27,7 @@ const LendCard = () => {
   }, [category]);
   return (
     <div className="lendCardContainer">
-      <p>Sort By</p>
+      <p className="sortBy">Sort By</p>
       {filterName.map((i) => {
         return (
           <div className="lendBox" key={i.id}>

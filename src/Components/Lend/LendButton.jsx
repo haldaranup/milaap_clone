@@ -1,9 +1,9 @@
 import React from "react";
 
-const LendButton = ({ name }) => {
+const LendButton = ({ name, wide, id }) => {
   return (
-    <div className="lendBtn">
-      <button>{name}</button>
+    <div className={id}>
+      <button style={{ width: `${wide}px` }}>{name}</button>
     </div>
   );
 };
