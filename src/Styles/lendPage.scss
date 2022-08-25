@@ -1,0 +1,45 @@
+@import "../../global.scss";
+
+.lendContainer {
+  
+  .spin{
+
+    position: inherit;
+    height: 40vh;
+    @include flex($fd: column, $jc: center, $ai: center);
+    p{
+      color: gray;
+    }
+  }
+  .lendHeading {
+    width: 1120px;
+    margin: auto;
+    h1 {
+      font-size: 1.7rem;
+      color: #514f4f;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    p {
+      font-weight: 500;
+      color: #8a8787;
+      letter-spacing: 1px;
+    }
+  }
+  .mianContent {
+    // border: 1px solid red;
+    @include flex();
+    gap: 20px;
+    width: 1120px;
+    margin: auto;
+    // border: 1px solid red;
+    .contentItems {
+      .sortPaginate {
+        border: 1px solid red;
+        @include flex;
+        margin: 40px 0;
+      }
+    }
+    
+  }
+}
