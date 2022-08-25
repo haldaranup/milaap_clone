@@ -2,7 +2,7 @@ import React from 'react'
 import {Box,Tag,Text,Flex,CircularProgress, Stack,CircularProgressLabel,Image} from "@chakra-ui/react";
 
 const DonateCard = ({data}) => {
-   console.log(...data.tax_ribbon)
+   console.log(data.tax_ribbon)
 
   return (
           <Box h="450px" w="320px" boxShadow="md" borderRadius="11px" _hover={{shadow: "rgba(0, 0, 0, 0.25) 0px 2px 2px, rgba(0, 0, 0, 0.22) 0px 3px 3px;"}}>
