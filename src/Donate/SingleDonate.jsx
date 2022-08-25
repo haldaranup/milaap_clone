@@ -1,11 +1,14 @@
 import { Box,Flex,Text,Heading, useDisclosure,Image, Tag,CircularProgress,CircularProgressLabel,Stack, Button,Link } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams, useSearchParams } from 'react-router-dom';
 import { getDonate } from '../Redux/AppReducer/action';
 import {BsWhatsapp,BsFacebook} from "react-icons/bs"
-
+import { Link as RouterLink } from 'react-router-dom';
 const SingleDonate = () => {
+
+  // const location = useLocation()
+  // console.log(location,"params")
   const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch()
   const {id} = useParams()
@@ -25,7 +28,7 @@ const SingleDonate = () => {
     }
   },[donate,id])
 
-
+  
   return (
     <Box>
        <Flex margin="auto" w={["95vw","95vw","95vw","80vw"]} gap="20px" direction={["column", "column", "column", "column", "row"]}>

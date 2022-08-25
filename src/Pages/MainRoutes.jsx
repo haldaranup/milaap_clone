@@ -6,6 +6,7 @@ import LendPage from "./LendPage";
 
 import Donate from "./Donate";
 import SingleDonate from "../Donate/SingleDonate";
+import ContactUs from "./ContactUs";
 const MainRoutes = () => {
   return (
     <Routes>
@@ -14,7 +15,7 @@ const MainRoutes = () => {
       <Route path="/donate" element={<Donate/>} />
       <Route path="/donate/:id" element={<SingleDonate/>} />
       <Route path="/fund" element={<LendPage />} />
-
+      <Route path="/contactUs" element={<ContactUs/>}/>
 
     </Routes>
   );
