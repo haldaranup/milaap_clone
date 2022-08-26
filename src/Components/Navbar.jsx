@@ -122,7 +122,7 @@ export default function Navbar() {
 
               <NavLink style={({ isActive }) =>
               isActive ? activeStyle : active4
-            } to="/contact">Contact us</NavLink>
+            } to="/contactUs">Contact us</NavLink>
 
           <Box   h={10} display="flex" alignItems="center" justifyContent={"center"} style={{marginLeft:"9px"}} >
           {/* <Switch  id='email-alerts'  /> */}

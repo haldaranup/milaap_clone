@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Box, Flex, Spinner } from "@chakra-ui/react";
 import RefineSearch from "../Donate/RefineSearch";
@@ -19,6 +20,7 @@ const Donate = () => {
         <Flex direction="column">
           <Box position="absolute" right="250px">
             <RefineSearch />
+
           </Box>
           <DonateItem />
         </Flex>
