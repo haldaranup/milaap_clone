@@ -17,7 +17,7 @@ const Donate = () => {
         </div>
       ) : (
         <Flex direction="column">
-          <Box position="absolute" right="250px">
+          <Box position="absolute" right="250px" mt="20px">
             <RefineSearch />
 
           </Box>
