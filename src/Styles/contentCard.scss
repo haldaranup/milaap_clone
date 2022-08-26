@@ -38,13 +38,19 @@
       max-height: 400px;
       .description {
         margin-bottom: 10px;
-        p {
+
+        .readMore {
           display: inline;
           color: $themeColor;
 
           &:hover {
             text-decoration: underline;
           }
+        }
+        .descDetails {
+          font-size: 0.95rem;
+          display: inline;
+          color: #828282;
         }
       }
       div {
@@ -55,6 +61,7 @@
         h6 {
           letter-spacing: 1px;
           word-spacing: 2px;
+          font-weight: 600;
         }
       }
       p {
@@ -83,11 +90,12 @@
       @include flex($ai: center);
       div {
         .alertLend {
-          border: 1px solid red;
+          // border: 1px solid red;
         }
       }
       button {
         width: 30px;
+        border-radius: 2px;
         background-color: rgb(226, 228, 228);
       }
       input {
