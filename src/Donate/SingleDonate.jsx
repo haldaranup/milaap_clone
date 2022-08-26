@@ -5,6 +5,8 @@ import {  useParams } from 'react-router-dom';
 import { getDonate } from '../Redux/AppReducer/action';
 import {BsWhatsapp,BsFacebook} from "react-icons/bs"
 import { FaHandHoldingHeart } from "react-icons/fa";
+import DonateModal from '../Pages/DonateModal';
+
 const SingleDonate = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -411,7 +413,7 @@ const SingleDonate = () => {
           </Box>
         </Hide>
       </Flex>
-      
+      <DonateModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
     </Box>
   )
 }
