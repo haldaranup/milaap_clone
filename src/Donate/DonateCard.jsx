@@ -1,5 +1,7 @@
 import React from 'react'
 import {Box,Tag,Text,Flex,CircularProgress, Stack,CircularProgressLabel,Image} from "@chakra-ui/react";
+import "../Styles/spin.scss";
+
 
 const DonateCard = ({data}) => {
    console.log(data.lozad_src)

@@ -7,6 +7,7 @@ import LendTop from "../Components/Lend/LendTop";
 import { getLendData } from "../Redux/AppReducer/action";
 import "../Styles/lendPage.scss";
 import { Spinner } from "@chakra-ui/react";
+import "../Styles/spin.scss";
 
 const LendPage = () => {
   const dispatch = useDispatch();

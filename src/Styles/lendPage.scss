@@ -2,15 +2,7 @@
 
 .lendContainer {
   
-  .spin{
-
-    position: inherit;
-    height: 40vh;
-    @include flex($fd: column, $jc: center, $ai: center);
-    p{
-      color: gray;
-    }
-  }
+  
   .lendHeading {
     width: 1120px;
     margin: auto;
