@@ -1,0 +1,82 @@
+.sign-up-container {
+  padding: 15%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #a33555, #5f2747);
+}
+.user-management-block {
+  background-color: #fff;
+  padding: 10px 0;
+  transform: translateY(-50%);
+  top: 50%;
+  border-radius: 10px;
+  position: relative;
+}
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #5d5d5d;
+  font-family: AvenirLTPro-Medium;
+}
+div {
+  display: block;
+}
+.row-main-frame {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.left-sider-block {
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+.row-main-frame .left-sider-block {
+  float: left;
+
+  box-sizing: border-box;
+  padding: 0 12px;
+  padding: 0 0.75rem;
+  min-height: 1px;
+}
+.user-management_Image {
+  color: #fff;
+  margin-bottom: 40px;
+}
+.center-align {
+  text-align: center;
+}
+.logo-wrapper {
+  background-color: #9c3353;
+  padding: 23px 20px 17px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.milaap-logo {
+  width: 55px;
+}
+.block-title {
+  color: #542e44;
+  font-size: 16px;
+  font-family: AvenirLTPro-Medium;
+}
+block-subtitle {
+  color: #9f9f9f;
+  font-size: 12px;
+}
+.user-management__block .user-management_Image:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -100%;
+  width: 2px;
+  height: 420px;
+  background-image: linear-gradient(180deg, #fff, #e0e1e3 47%, #fff);
+}
