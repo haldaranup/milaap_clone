@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Box, Flex, Spinner } from "@chakra-ui/react";
 import RefineSearch from "../Donate/RefineSearch";
