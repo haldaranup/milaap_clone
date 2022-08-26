@@ -1,7 +1,14 @@
-import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,Input,Center, Button,} from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,Input,Center, Button, Textarea,} from "@chakra-ui/react";
   import React from "react";
   
   const ContactUs = () => {
+
+    function handleSubmit(e){
+      setTimeout(() => {
+        e.target.reset();
+      }, 3000);
+    }
+
     return (
       <>
         <div>
@@ -108,20 +115,28 @@ import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,In
           <Box mt={"4%"}  >
             <Image src="./img4.png" m={"auto"} w="98%"/>
           </Box>
+          
           <Box w={"80%"} m={"auto"} mt={"5%"} textAlign={"start"}>
             <Heading fontSize={"30px"}>Let us know what you think</Heading>
+            <form
+            onSubmit={handleSubmit}
+            name="contact"
+            method="POST"
+            action="https://getform.io/f/8868c4e2-ac5f-4c2a-89fc-71844d80620e"
+            
+          >
             <Center>
-              <Input mt={"3%"} mr={"2%"} type="text" placeholder={"Name"} />
-              <Input mt={"3%"} type="email" placeholder={"Email address"} />
+              <Input mt={"3%"} mr={"2%"} type="text" placeholder={"Name"} required/>
+              <Input mt={"3%"} type="email" placeholder={"Email address"} required />
             </Center>
             <Center>
-              <Input
+              <Textarea
                 mt={"3%"}
                 h={"200px"}
-                type={"textarea"}
+                
                 placeholder={
                   "You can type any suggestions or queries you might have. Let us help you!"
-                }
+                } required
               />
             </Center>
             <Button
@@ -135,6 +150,7 @@ import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,In
             >
               Send
             </Button>
+            </form>
           </Box>
         </div>
        

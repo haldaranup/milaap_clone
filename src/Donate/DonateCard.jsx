@@ -11,7 +11,6 @@ const DonateCard = ({data}) => {
             
           <Image  src={data.lozad_src} alt="my_name" borderRadius="3px 3px 0px 0px" h="250px" w="100%"
           {...data.tax_ribbon ? (
-          
             <Tag m="15px 0px 0px -220px" bg={"#9c3353"} color="white">
               {data.tax_ribbon}
             </Tag>
