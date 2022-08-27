@@ -142,7 +142,7 @@ React.useEffect(() => {
             <Button
               rounded={'full'}
               fontSize={{base:"13px",sm:"18px",md:"17px",lg:"25px",xl:"","2xl":""}}
-              
+              onClick={()=> navigate('/fund')}
               width={{base:"70%",lg:"80%"}}
               h={{base:"8vh",lg:"8vh"}}
               bg={'#9c3353'}
