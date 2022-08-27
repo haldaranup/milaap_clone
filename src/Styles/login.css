@@ -15,7 +15,7 @@
 }
 
 .login-details {
-  width: 80%;
+  width: 100%;
   margin: auto;
   display: flex;
 }
@@ -136,7 +136,7 @@ div {
 }
 
 /* 
-======================== */
+  ======================== */
 
 #register-form {
   width: 512px;
@@ -276,4 +276,36 @@ a {
   #register-form .google-btn:after {
     content: "Google+";
   }
+}
+
+.social-container {
+  width: 40%;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+.social-facebook {
+  flex-basis: 40%;
+  margin: auto;
+  padding: auto;
+}
+.social-google {
+  flex-basis: 40%;
+  margin: auto;
+  padding: auto;
+}
+.btn {
+  width: 100%;
+  border: 1px solid gainsboro;
+  padding: 7px;
+  border-radius: 30px;
+  color: white;
+}
+.facebook-btn {
+  background-color: #3b5998;
+}
+.google-btn {
+  background-color: #dd4b39;
 }

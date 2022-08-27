@@ -259,7 +259,7 @@ export default function Navbar() {
                   Login
                 </MenuItem>
                 <MenuDivider />
-                <MenuItem w={"50%"} onClick={() => navigate("/users/sign-up")}>
+                <MenuItem w={"50%"} onClick={() => navigate("/register")}>
                   Register
                 </MenuItem>
               </MenuList>

@@ -1,45 +1,71 @@
-import "../Styles/signup.css";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { registerInitiate } from "../Redux/AuthReducer/action";
+import {
+  googleSignInInitiate,
+  loginInitiate,
+} from "../Redux/AuthReducer/action";
+import "../Styles/login.css";
 
-export const SignUP = () => {
+export const LogIn = () => {
   const [state, setState] = useState({
-    displayName: "",
     email: "",
     password: "",
   });
+  const [update, setUpdate] = useState(false);
+
+  const { email, password } = state;
 
   const { currentUser } = useSelector((state) => state.userReducer);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (currentUser) {
+    if (update) {
       navigate("/");
     }
   }, [currentUser, navigate]);
 
   const dispatch = useDispatch();
 
-  const { email, password, displayName } = state;
+  const handleGoogleSignIn = () => {
+    dispatch(googleSignInInitiate());
+    setUpdate(true);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (password !== passwordConfirm) {
-    //   return alert("Passwords don't match");
-    // }
-    dispatch(registerInitiate(email, password, displayName));
-    setState({ email: "", displayName: "", password: "" });
-    alert("You have successfully registered");
-    navigate("/login");
+    if (!email || !password) {
+      return alert("Please fill in all fields");
+    }
+    if (password.length < 6) {
+      return alert("Password must be at least 6 characters");
+    }
+    if (email.length < 6) {
+      return alert("Email must be at least 6 characters");
+    }
+    if (!email.includes("@")) {
+      return alert("Please enter a valid email");
+    }
+    if (!email.includes(".")) {
+      return alert("Please enter a valid email");
+    }
+    //if(!e.email){
+    //return alert("Please enter a valid email");
+
+    // if(e.password !== password)
+    // return alert("Please enter a valid password");
+
+    dispatch(loginInitiate(email, password));
+    setState({ email: "", password: "" });
+    alert("You have successfully logged in");
+    navigate("/");
   };
+
   const handleChange = (e) => {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
-
   return (
     <div className="sign-up-container">
       <div className="user-management-block">
@@ -69,24 +95,25 @@ export const SignUP = () => {
             >
               <div className="sign-up-component">
                 <div className="">
-                  <div className="sign-up-title">
-                    Sign up &amp; manage fundraisers, donations &amp; more
+                  <div className="sign-up-title">Quickly login using</div>
+                  <div className="social-container">
+                    <div className="social-facebook">
+                      <button className="btn facebook-btn ">Facebook</button>
+                    </div>
+                    <div className="social-google">
+                      <button
+                        className="btn google-btn "
+                        type="button"
+                        onClick={handleGoogleSignIn}
+                      >
+                        Google
+                      </button>
+                    </div>
                   </div>
                   <form className="form-signup" onSubmit={handleSubmit}>
                     <input
-                      type="text"
-                      id="displayName"
-                      className="form-control"
-                      placeholder="Full Name"
-                      name="displayName"
-                      onChange={handleChange}
-                      value={displayName}
-                      required
-                    />
-
-                    <input
                       type="email"
-                      id="userEmail"
+                      id="inputEmail"
                       className="form-control"
                       placeholder="Email"
                       name="email"
@@ -107,7 +134,7 @@ export const SignUP = () => {
                     />
 
                     <button className="block" type="submit">
-                      Sign Up
+                      Login
                     </button>
                     <div
                       style={{
@@ -116,11 +143,11 @@ export const SignUP = () => {
                     ></div>
                     <div className="login-details">
                       <div className="login-description">
-                        Already signed up with Milaap?{" "}
+                        New to Milaap? Sign up now, it’s quick & free
                       </div>
                       <div className="login-btn">
                         <Link to="/login">
-                          <button className="btn_login">Login</button>
+                          <button className="btn_login">Sign up</button>
                         </Link>
                       </div>
                     </div>
