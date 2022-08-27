@@ -29,7 +29,7 @@ const DonateModal = ({ isOpen, onOpen, onClose }) => {
               </Box>
               <Box mt={"2%"}>
                 <label>Amount</label>
-                <Input mt={"3%"} type="number" placeholder="2500"/>
+                <Input mt={"3%"} type="number"/>
               </Box>
             </Flex>
           </Box>
