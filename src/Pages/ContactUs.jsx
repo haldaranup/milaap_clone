@@ -52,64 +52,6 @@ import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,In
                   US
                 </Tab>
               </TabList>
-              <TabPanels>
-                <TabPanel textAlign={"start"}>
-                  <Text mt={"2%"} mb={"2%"}>
-                    Milaap Social Ventures India Pvt. Ltd. ClayWorks Create –
-                    building,11th KM Create Campus, Arakere Bannerghatta Rd,
-                    Bangalore, Karnataka, India 560076
-                  </Text>
-                  <a
-                    style={{ color: "#9c3353" }}
-                    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&su=&body=&to=feedback@milaap.org"
-                  >
-                    feedback@milaap.org
-                  </a>
-                  <Box mt={"1%"} color={"#9c3353"}>
-                    2370042324
-                  </Box>
-                </TabPanel>
-                <TabPanel textAlign={"start"}>
-                  <Text mt={"2%"} mb={"2%"}>
-                    Milaap Social Ventures Pte. Ltd.
-                    <br />
-                    C/O Jungle Ventures,
-                    <br />
-                    79 Ayer Rajah Crescent, Block 79,
-                    <br />
-                    Singapore 139955
-                    <br />
-                  </Text>
-                  <a
-                    style={{ color: "#9c3353" }}
-                    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&su=&body=&to=feedback@milaap.org"
-                  >
-                    mayukh@milaap.org
-                  </a>
-                  <Box mt={"1%"} color={"#9c3353"}>
-                    (+65) 3129 5466
-                  </Box>
-                </TabPanel>
-                <TabPanel textAlign={"start"}>
-                  <Text mt={"2%"} mb={"2%"}>
-                    Milaap Social Ventures USA Pvt. Ltd.
-                    <br />
-                    311 North Market Street – Suite 200
-                    <br />
-                    Dallas, TX 75202
-                    <br />
-                  </Text>
-                  <a
-                    style={{ color: "#9c3353" }}
-                    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&su=&body=&to=feedback@milaap.org"
-                  >
-                    feedback@milaap.org
-                  </a>
-                  <Box mt={"1%"} color={"#9c3353"}>
-                    +1 (805) 590-7978
-                  </Box>
-                </TabPanel>
-              </TabPanels>
             </Tabs>
           </Box>
           <Box mt={"4%"}  >
