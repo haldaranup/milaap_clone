@@ -45,7 +45,8 @@ const LendAlert = ({ name, loanAmount, count, wide }) => {
                 View Basket
               </Button>
               <div className="lendBtn">
-                <Button colorScheme="red" ml={3}>
+                <Button colorScheme="red" ml={3}
+                >
                   Pay Now
                 </Button>
               </div>

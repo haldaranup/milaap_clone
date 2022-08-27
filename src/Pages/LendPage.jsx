@@ -74,7 +74,7 @@ const LendPage = () => {
           <LendCard />
           <div className="contentItems">
             <div className="sortPaginate">
-              <div>Paginate</div>
+              <div></div>
               <div className="sortContainer">
                 <SelectDrop changeVal={handleChangeVal} />
                 <div className="sortIcon">
