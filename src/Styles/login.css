@@ -34,18 +34,7 @@
   border: none;
   outline: none;
 }
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: #5d5d5d;
-  font-family: AvenirLTPro-Medium;
-}
+
 div {
   display: block;
 }
