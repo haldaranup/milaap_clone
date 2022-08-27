@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import ContentCard from "../Components/Lend/ContentCard";
@@ -6,8 +6,10 @@ import LendCard from "../Components/Lend/LendCard";
 import LendTop from "../Components/Lend/LendTop";
 import { getLendData } from "../Redux/AppReducer/action";
 import "../Styles/lendPage.scss";
-import { Spinner } from "@chakra-ui/react";
+import { Heading, Spinner } from "@chakra-ui/react";
 import "../Styles/spin.scss";
+import SelectDrop from "../Components/Lend/SelectDrop";
+import { RiArrowUpDownFill } from "react-icons/ri";
 
 const LendPage = () => {
   const dispatch = useDispatch();
@@ -15,18 +17,46 @@ const LendPage = () => {
   const lendData = useSelector((state) => state.AppReducer.lendData);
   const isLoading = useSelector((state) => state.AppReducer.isLoading);
   const initialState = searchParams.getAll("category");
+
+  const [sortVal, setSortVal] = useState("popularity");
+  // console.log("sortVal:", sortVal);
   // console.log(lendData);
-  // console.log(initialState)
+  // console.log(initialState);
+  const [low, setLow] = useState(false);
+
+  const handleChangeVal = (e) => {
+    setSortVal(e.target.value);
+  };
+
+  const handleSortBtn = () => {
+    setLow(!low);
+  };
 
   useEffect(() => {
     dispatch(getLendData());
   }, []);
 
+  let dataLength;
+
   const mapAndSort = (data) => {
-    return data?.map((i) => {
-      console.log("item", i);
-      return <ContentCard item={i} key={i.id} />;
-    });
+    dataLength = data.length;
+
+    return data
+      .sort((a, b) => {
+        if (sortVal == "popularity") {
+          if (low) return a.funded - b.funded;
+          else return b.funded - a.funded;
+        } else if (sortVal == "pending") {
+          if (low) return a.required - b.required;
+          else return b.required - a.required;
+        } else if (sortVal == "rates") {
+          if (low) return a.rates - b.rates;
+          else return b.rates - a.rates;
+        }
+      })
+      .map((i) => {
+        return <ContentCard item={i} key={i.id} />;
+      });
   };
 
   return (
@@ -45,7 +75,14 @@ const LendPage = () => {
           <div className="contentItems">
             <div className="sortPaginate">
               <div>Paginate</div>
-              <div>Sort</div>
+              <div className="sortContainer">
+                <SelectDrop changeVal={handleChangeVal} />
+                <div className="sortIcon">
+                  <button onClick={handleSortBtn}>
+                    <RiArrowUpDownFill />
+                  </button>
+                </div>
+              </div>
             </div>
             {initialState &&
               mapAndSort(
@@ -60,6 +97,19 @@ const LendPage = () => {
                   return false;
                 })
               )}
+            {dataLength == 0 && initialState.length != 0 && (
+              <Heading
+                size="lg"
+                fontSize="40px"
+                style={{
+                  color: "gray",
+                  textAlign: "center",
+                  margin: "160px 0",
+                }}
+              >
+                Sorry no data found!!!
+              </Heading>
+            )}
             {initialState.length === 0 && mapAndSort(lendData)}
           </div>
         </div>

@@ -58,11 +58,13 @@ const ContentCard = ({ item }) => {
             <ImLocation />
             <h6>{item.location}</h6>
           </div>
-          <p>Purpose: {item.Purpose}</p>
+          <p>
+            <strong>Purpose</strong>: {item.Purpose}
+          </p>
           <p className="description">
-            {item.description}
+            <p className="descDetails">{item.description}</p>
             <RouterLinik to="/fund">
-              <p>Read more</p>
+              <p className="readMore">Read more</p>
             </RouterLinik>
           </p>
         </div>

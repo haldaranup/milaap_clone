@@ -12,7 +12,6 @@ import "../../Styles/filterLend.scss";
 const FilterLend = ({ item, filter, category }) => {
   return (
     <div className="dropDownContainer">
-      
       <Accordion allowToggle>
         <AccordionItem style={{ border: "1px solid #dedcdd" }}>
           <h2>
