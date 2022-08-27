@@ -4,18 +4,19 @@ import "../Styles/spin.scss";
 
 
 const DonateCard = ({data}) => {
-   console.log(data.tax_ribbon)
+   
 
   return (
           <Box h="450px" w="320px" boxShadow="md" borderRadius="11px" _hover={{shadow: "rgba(0, 0, 0, 0.25) 0px 2px 2px, rgba(0, 0, 0, 0.22) 0px 3px 3px;"}}>
             
-          <Image  src={data.lozad_src} alt="my_name" borderRadius="3px 3px 0px 0px" h="250px" w="100%"
-          {...data.tax_ribbon ? (
+          <Image  src={data.lozad_src} alt="my_name" borderRadius="3px 3px 0px 0px" h="250px" w="100%"/>
+          {/* {data.tax_ribbon ? (
             <Tag m="15px 0px 0px -220px" bg={"#9c3353"} color="white">
               {data.tax_ribbon}
             </Tag>
-          ) : null}
-        />
+          ) : null} */}
+          
+        
         <Box h="60px">
           <Text
             fontSize="15px"
