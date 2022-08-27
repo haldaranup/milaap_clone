@@ -24,9 +24,9 @@ const FundraiserCalculator = () => {
   };
   return (
     <Box>
-      <Box fontSize="22px" p={"20px 0 10px"} fontFamily="AvenirLTPro-Book">
-        <h3>Fundraiser goal calculator</h3>
-        <Box color={"#5d5d5d"} fontSize="14px" p={"0 30px"}>
+      <Box fontSize="22px" p={"20px 0 10px"} fontFamily="AvenirLTPro-Book" textAlign="center">
+        <h3 style={{fontWeight:"700", fontSize:"26px"}}>Fundraiser goal calculator</h3>
+        <Box color={"#5d5d5d"} fontSize="18px" p={"0 30px"} >
           A simple way to plan and achieve your fundraiser goal
         </Box>
       </Box>
@@ -89,6 +89,7 @@ const FundraiserCalculator = () => {
         rounded="lg"
         overflow="hidden"
         bg={"#9c3353"}
+        textAlign="center"
       >
         <Button
           onClick={onToggle}

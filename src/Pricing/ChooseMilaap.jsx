@@ -6,7 +6,7 @@ import React from "react";
 const ChooseMilaap = () => {
   return (
     <Box p="4" bg="green.100" >
-      <Box fontSize="30px" fontFamily={"AvenirLTPro-Medium"} fontWeight="400">
+      <Box fontSize="30px" fontFamily={"AvenirLTPro-Medium"} fontWeight="400" textAlign="center">
         <h3>Why choose Milaap?</h3>
         <br />
       </Box>
