@@ -76,6 +76,7 @@ const LendPage = () => {
             <div className="sortPaginate">
               <div></div>
               <div className="sortContainer">
+                <p>Sort by</p>
                 <SelectDrop changeVal={handleChangeVal} />
                 <div className="sortIcon">
                   <button onClick={handleSortBtn}>
