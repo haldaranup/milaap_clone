@@ -8,6 +8,7 @@ import { useSearchParams } from "react-router-dom";
 const LendCard = () => {
   let filterName = res.filterName;
   const [searchParams, setSearchParams] = useSearchParams();
+
   const initialState = searchParams.getAll("category");
   const [category, setCategory] = useState(initialState || []);
 
@@ -27,7 +28,7 @@ const LendCard = () => {
   }, [category]);
   return (
     <div className="lendCardContainer">
-      <p className="sortBy">Sort By</p>
+      <p className="sortBy">Filter By</p>
       {filterName.map((i) => {
         return (
           <div className="lendBox" key={i.id}>

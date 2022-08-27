@@ -30,6 +30,7 @@ const LendAlert = ({ name, loanAmount, count, wide }) => {
         leastDestructiveRef={cancelRef}
         onClose={onClose}
         isOpen={isOpen}
+        isCentered
       >
         <AlertDialogOverlay />
         <AlertDialogContent>

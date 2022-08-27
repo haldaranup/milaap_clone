@@ -148,7 +148,7 @@ export default function Navbar() {
 
               <NavLink
                 style={({ isActive }) => (isActive ? activeStyle : active4)}
-                to="/contact"
+                to="/contactUs"
               >
                 Contact us
               </NavLink>

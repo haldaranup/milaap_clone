@@ -1,19 +1,10 @@
 @import "../../global.scss";
 
 .lendContainer {
-  
-  .spin{
-
-    position: inherit;
-    height: 40vh;
-    @include flex($fd: column, $jc: center, $ai: center);
-    p{
-      color: gray;
-    }
-  }
   .lendHeading {
     width: 1120px;
     margin: auto;
+    padding: 24px 0;
     h1 {
       font-size: 1.7rem;
       color: #514f4f;
@@ -35,11 +26,35 @@
     // border: 1px solid red;
     .contentItems {
       .sortPaginate {
-        border: 1px solid red;
+        // border: 1px solid red;
         @include flex;
+        min-width: 850px;
         margin: 40px 0;
+        .sortContainer {
+          width: 190px;
+          @include flex($ai: center);
+
+          .dropSort Select,
+          .sortIcon {
+            border-radius: 18px;
+            height: 28px;
+            text-align: center;
+            border: 1px solid rgb(174, 174, 174);
+            cursor: pointer;
+            &:hover {
+              background-color: rgb(191, 191, 191);
+              box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+                rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+          }
+          .sortIcon {
+            width: 44px;
+            button {
+              margin: 4px 0 0 0;
+            }
+          }
+        }
       }
     }
-    
   }
 }
