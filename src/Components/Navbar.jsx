@@ -101,7 +101,7 @@ export default function Navbar() {
               {" "}
               <Image
                 onClick={() => navigate("/")}
-                style={{marginLeft: "24px"}}
+                style={{marginLeft: "24px",cursor:"pointer"}}
                 h={10}
                 src="https://assets.milaap.org/assets/milaap-logo-tiny-4d3dbc4e55c2aaec351f0f376329c624236c4d6266b910f472684e70603f600d.png"
                 alt="Dan Abramov"
@@ -191,7 +191,7 @@ export default function Navbar() {
             justifyContent="space-around"
           >
             <Button
-              onClick={() => navigate("/fundraiser")}
+              onClick={() => navigate("/fund")}
               size="lg"
               fontSize={"1rem"}
               fontWeight={"semibold"}
