@@ -69,6 +69,7 @@ const SingleDonate = () => {
               <Link>1465 suppporters</Link>
             </Button>
           </Flex>
+          <a href="https://web.whatsapp.com" target="_blank" rel="noreferrer">
           <Button
             bg={"#25d366"}
             color="white"
@@ -76,9 +77,12 @@ const SingleDonate = () => {
             w="280px"
             borderRadius="25px"
           >
+            
             <BsWhatsapp/>
             Share
-          </Button>
+          </Button></a>
+          
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
           <Button
             bg={"#3b5998"}
             color="white"
@@ -89,7 +93,7 @@ const SingleDonate = () => {
           >
             <BsFacebook />
             Share
-          </Button>
+          </Button></a>
           <Flex  justifyContent="space-around" m="20px">
           <Flex border={"1px solid #e0e1e3"} w="300px">
           <Box bg={"#eddae0"} borderRadius="50%" w="50px" h="50px" m="20px">

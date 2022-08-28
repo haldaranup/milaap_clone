@@ -101,6 +101,7 @@ export default function Navbar() {
               {" "}
               <Image
                 onClick={() => navigate("/")}
+                style={{marginLeft: "24px",cursor:"pointer"}}
                 h={10}
                 src="https://assets.milaap.org/assets/milaap-logo-tiny-4d3dbc4e55c2aaec351f0f376329c624236c4d6266b910f472684e70603f600d.png"
                 alt="Dan Abramov"
@@ -135,6 +136,7 @@ export default function Navbar() {
               <NavLink
                 style={({ isActive }) => (isActive ? activeStyle : active4)}
                 to="/fund"
+                width="80px"
               >
                 Lend
               </NavLink>
@@ -189,24 +191,12 @@ export default function Navbar() {
             justifyContent="space-around"
           >
             <Button
-              onClick={() => navigate("/fundraiser")}
-              size="sm"
-              fontSize="1.6vw"
-              height={{
-                sm: "1em",
-                md: "1em",
-                lg: "2.5em",
-                xl: "1em",
-                "2xl": "2em",
-              }}
-              width={{
-                sm: "1em",
-                md: "1em",
-                lg: "1em",
-                xl: "1em",
-                "5xl": "2em",
-              }}
+              onClick={() => navigate("/fund")}
+              size="lg"
+              fontSize={"1rem"}
+              fontWeight={"semibold"}
               borderRadius={"50px"}
+              style={{letterSpacing: "1.6px"}}
               background={"#9c3353"}
               color={"white"}
               variant="solid"
@@ -215,13 +205,7 @@ export default function Navbar() {
                   "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;",
               }}
               _focus={{ color: "white", background: "#9c3353" }}
-              padding={{
-                sm: "1.3em",
-                md: "1.2em",
-                lg: "1em",
-                xl: "1em",
-                "2xl": "1em",
-              }}
+              
             >
               Start a fundraiser
             </Button>

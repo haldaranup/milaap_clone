@@ -182,7 +182,7 @@ export default function Footer() {
                   }}
           >
             <Button
-              onClick={() => navigate("/fundraiser")}
+              onClick={() => navigate("/fund")}
               size={{
                 base: "sm",
                 sm: "sm",
