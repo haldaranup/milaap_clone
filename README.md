@@ -40,4 +40,4 @@ In this project, we clone a website named “milaap” this is raising funds onl
 ![image](https://i.imgur.com/IAnbUg5.png)
 ![image](https://i.imgur.com/jENbJoR.png)
 ![image](https://i.imgur.com/mpz1ZAC.png)
-![image](https://i.imgur.com/xXeck60.png)
+![image](https://i.imgur.com/xfMiGXf.png)
