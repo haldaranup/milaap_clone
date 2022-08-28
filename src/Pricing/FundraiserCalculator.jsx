@@ -14,14 +14,19 @@ import {
   Spacer,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 const FundraiserCalculator = () => {
-  const { isOpen, onToggle } = useDisclosure();
   const property = {
     
     defaultValue: 10000,
   };
+  const { isOpen, onToggle } = useDisclosure();
+  const [price, setPrice]  = useState(0)
+  const handleChange = (e) =>  {
+    setPrice(e.target.value)
+    console.log(price)
+  }
   return (
     <Box>
       <Box fontSize="22px" p={"20px 0 10px"} fontFamily="AvenirLTPro-Book" textAlign="center">
@@ -53,18 +58,22 @@ const FundraiserCalculator = () => {
                 <option value="INR">₹ INR</option>
                 <option value="USD">₹ USD</option>
               </Select>
-              <NumberInput
+              <input type="number" onChange={handleChange}  />
+              {/* <NumberInput
                 ml="-1"
                 borderTopColor="#fff"
                 borderLeftColor="#fff"
                 borderRightColor="#fff"
                 borderRadius={"none"}
-                value= {`${property.defaultValue}`}
+                // value= {`${property.defaultValue}`}
+                onChange = {handleChange}
+                // value = {price}
+                
               >
                 <NumberInputField />
 
                 <NumberInputStepper></NumberInputStepper>
-              </NumberInput>
+              </NumberInput> */}
             </Flex>
           </Flex>
           <Box ml="5%" w="90%" mt={"14"}>
@@ -119,21 +128,26 @@ const FundraiserCalculator = () => {
           <Flex>
             <Box p={4} textAlign={"left"} maxW={"24%"}>
                 <Box mt={"50px"}><h4>​​Consider setting a goal of approx.</h4></Box>
-              <Box fontSize="30px"><h1 >₹1,02,322.73</h1></Box>
+              <Box fontSize="30px"><h1 >{((+price)+(+price)*2/100)}</h1></Box>
               <Box fontStyle={"italic"} fontSize={"12px"}>Disclaimer: This goal is the approximate amount you should consider setting where we assume that you would receive 70% of the total funds from INR contributions.</Box>
               
             </Box>
             <Spacer />
             <Box minW={'60%'} >
-                <Box ml={"27%"}>See breakup</Box>
-                <Flex>
+                <Box ml={"50%"}>See breakup</Box>
+                <br /><br />
+                <Flex marginLeft={"20%"}>
                     <Box>
-                        <Box></Box>
-                        <Box></Box>
-                        <Box></Box>
+                        <Box>Want to raise (₹) :</Box><br />
+                        <Box>Milaap platform fee (₹) :</Box><br />
+                        <Box>Payment gateway charges (₹) :</Box><br />
                     </Box>
-
-                    <Box></Box>
+                    <Spacer />
+                    <Box>
+                    <Box>{price}</Box><br />
+                        <Box>0</Box><br />
+                        <Box>{price*2/100}</Box><br />
+                    </Box>
                 </Flex>
             </Box>
           </Flex>

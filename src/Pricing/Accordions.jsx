@@ -14,7 +14,7 @@ const Accordions = () => {
   return (
     <div >
         <h3>
-            <span>Related FAQs</span>
+            <Box fontSize={"2xl"} margin='40px'>Related FAQs</Box>
         </h3>
          <Accordion maxWidth="30%" allowToggle marginLeft='20px'  textAlign='left'>
       <AccordionItem >

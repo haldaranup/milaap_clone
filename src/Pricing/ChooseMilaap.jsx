@@ -5,7 +5,7 @@ import React from "react";
 
 const ChooseMilaap = () => {
   return (
-    <Box p="4" bg="green.100" >
+    <Box p="4" bg="green.100"  >
       <Box fontSize="30px" fontFamily={"AvenirLTPro-Medium"} fontWeight="400" textAlign="center">
         <h3>Why choose Milaap?</h3>
         <br />
@@ -32,7 +32,7 @@ const ChooseMilaap = () => {
              
              
             </Box>
-            <Box>Dedicated relationship manager to address all your fundraising needs. Receive help and support anytime, anywhere</Box>
+            <Box className="des">Dedicated relationship manager to address all your fundraising needs. Receive help and support anytime, anywhere</Box>
           </Box>
           <br />
           {/* //className="App-logo" */}
@@ -63,7 +63,7 @@ const ChooseMilaap = () => {
               
               
             </Box>
-            <Box>Set up your fundraiser effortlessly, in 3 simple steps</Box>
+            <Box className="des">Set up your fundraiser effortlessly, in 3 simple steps</Box>
           </Box>
           <br />
 
@@ -88,7 +88,7 @@ const ChooseMilaap = () => {
               
               
             </Box>
-            <Box>Provide all the necessary documents (government ID proof, bank account details etc.), request transfer and withdraw funds safely in a few simple steps</Box>
+            <Box className="des">Provide all the necessary documents (government ID proof, bank account details etc.), request transfer and withdraw funds safely in a few simple steps</Box>
           </Box>
           <br />
           <Box
@@ -113,7 +113,7 @@ const ChooseMilaap = () => {
             </Box>
 
 
-            <Box>Expert support at your service, whenever you need</Box>
+            <Box className="des">Expert support at your service, whenever you need</Box>
             
           </Box>
           <Button
@@ -158,7 +158,7 @@ Start a fundraiser
                 </Box>
               </Flex>
             </Box>
-            <Box>Manage all your fundraiser details (withdrawals, donations, receipts and much more) with the interactive dashboard</Box>
+            <Box className="des">Manage all your fundraiser details (withdrawals, donations, receipts and much more) with the interactive dashboard</Box>
           </Box>
           <br />
 
@@ -181,7 +181,7 @@ Start a fundraiser
               
               
             </Box>
-            <Box>The most secure encryption technology to keep your funds safe ​</Box>
+            <Box className="des">The most secure encryption technology to keep your funds safe ​</Box>
           </Box>
           <br />
           <Box
@@ -203,7 +203,7 @@ Start a fundraiser
               
               
             </Box>
-            <Box>New mobile app to keep your fundraiser needs at your fingertips</Box>
+            <Box className="des">New mobile app to keep your fundraiser needs at your fingertips</Box>
           </Box>
         </Box>
       </Flex>
