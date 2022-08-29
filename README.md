@@ -22,7 +22,9 @@ In this project, we clone a website named “milaap” this is raising funds onl
  * Firebase.
  * Chakra ui.
  * scss.
- * Json.
+ * Json-server.
+ * HTML.
+ * CSS.
  
 
  Learning :-
