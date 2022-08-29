@@ -13,7 +13,7 @@ In this project, we clone a website named “milaap” this is raising funds onl
  * Anowar Hosain.
  * Altaf Ali Baig.
  * Bishnu Gorai.
- * Anup Halder.
+ * Anup Haldar.
  * Ankur Mishra.
 
  Tech Stack:
