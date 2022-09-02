@@ -3,8 +3,8 @@ import LendButton from "./LendButton";
 import "../../Styles/contentCard.scss";
 import { ImLocation } from "react-icons/im";
 import { Progress } from "@chakra-ui/react";
-import { Link as RouterLinik } from "react-router-dom";
 import LendAlert from "./LendAlert";
+import { loadData, saveData } from "../../Utils/localStorage";
 
 const ContentCard = ({ item }) => {
   //  console.log(item)
@@ -18,6 +18,16 @@ const ContentCard = ({ item }) => {
     setLendRef("Added to Basket");
     setAdd(true);
     setWide(160);
+    loadData("amount")
+      ? setLend(Number(loadData("amount")) + Number(lend))
+      : setLend(Number(lend));
+    loadData("count") ? setCount(Number(loadData("count")) + 1) : setCount(1);
+    loadData("amount")
+      ? saveData("amount", Number(loadData("amount")) + Number(lend))
+      : saveData("amount", Number(lend));
+    loadData("count")
+      ? saveData("count", loadData("count") + 1)
+      : saveData("count", 1);
   };
 
   return (
@@ -63,9 +73,7 @@ const ContentCard = ({ item }) => {
           </p>
           <p className="description">
             <p className="descDetails">{item.description}</p>
-            <RouterLinik to="/fund">
               <p className="readMore">Read more</p>
-            </RouterLinik>
           </p>
         </div>
 
@@ -83,7 +91,6 @@ const ContentCard = ({ item }) => {
 
           <div
             onClick={() => {
-              setCount((prev) => prev + 1);
               handleAdd();
             }}
           >
