@@ -126,8 +126,8 @@ import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,In
             
           >
             <Center>
-              <Input mt={"3%"} mr={"2%"} type="text" placeholder={"Name"} required/>
-              <Input mt={"3%"} type="email" placeholder={"Email address"} required />
+              <Input mt={"3%"} mr={"2%"} name="name" placeholder={"Name"} required/>
+              <Input mt={"3%"} name="email" placeholder={"Email address"} required />
             </Center>
             <Center>
               <Textarea
@@ -146,6 +146,7 @@ import { Box, Flex, Image, Text, Tabs,TabList, Tab,TabPanel,TabPanels,Heading,In
               fontSize={"20px"}
               w="18%"
               type="submit"
+              name="message"
               bgColor={"#9c3353"}
             >
               Send
