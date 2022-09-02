@@ -42,6 +42,7 @@
         .readMore {
           display: inline;
           color: $themeColor;
+          cursor: pointer;
 
           &:hover {
             text-decoration: underline;
